@@ -22,24 +22,27 @@ import java.util.Map;
  */
 public final class RomanToInteger {
 
-  private static final Map<String, Integer> ROMAN_NUMERALS_MAP = new HashMap<>();
+  private static final Map<String, Integer> ROMAN_NUMERALS_MAP =
+      new HashMap<>() {
+        {
+          put("I", 1);
+          put("IV", 4);
+          put("V", 5);
+          put("IX", 9);
+          put("X", 10);
+          put("XL", 40);
+          put("L", 50);
+          put("XC", 90);
+          put("C", 100);
+          put("CD", 400);
+          put("D", 500);
+          put("CM", 900);
+          put("M", 1000);
+        }
+      };
   private static final List<String> SUBTRACT_CASES = List.of("IV", "IX", "XL", "XC", "CD", "CM");
 
   public int romanToInt(String s) {
-    ROMAN_NUMERALS_MAP.put("I", 1);
-    ROMAN_NUMERALS_MAP.put("IV", 4);
-    ROMAN_NUMERALS_MAP.put("V", 5);
-    ROMAN_NUMERALS_MAP.put("IX", 9);
-    ROMAN_NUMERALS_MAP.put("X", 10);
-    ROMAN_NUMERALS_MAP.put("XL", 40);
-    ROMAN_NUMERALS_MAP.put("L", 50);
-    ROMAN_NUMERALS_MAP.put("XC", 90);
-    ROMAN_NUMERALS_MAP.put("C", 100);
-    ROMAN_NUMERALS_MAP.put("CD", 400);
-    ROMAN_NUMERALS_MAP.put("D", 500);
-    ROMAN_NUMERALS_MAP.put("CM", 900);
-    ROMAN_NUMERALS_MAP.put("M", 1000);
-
     int total = 0;
 
     // Look for all the subtraction cases and remove them. But, add them along the way.
