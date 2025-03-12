@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.kevingann.RemoveElementTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.015 s <<< FAILURE! -- in com.kevingann.RemoveElementTest
+com.kevingann.RemoveElementTest.firstCase -- Time elapsed: 0.011 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 2
+ but was: -1
+	at com.kevingann.RemoveElementTest.firstCase(RemoveElementTest.java:14)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kevingann.RemoveElementTest.secondCase -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 5
+ but was: -1
+	at com.kevingann.RemoveElementTest.secondCase(RemoveElementTest.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
